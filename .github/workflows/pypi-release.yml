@@ -4,7 +4,6 @@ on:
    push:
       branches:
          - master
-         - main
 
 jobs:
    build:
@@ -51,7 +50,7 @@ jobs:
 
       environment:
          name: pypi
-         url: https://pypi.org/project/milkpay/${{ steps.package-version.outputs.value }}/
+         url: https://pypi.org/project/milkpay-cryptopay/${{ steps.package-version.outputs.value }}/
 
       permissions:
          id-token: write
