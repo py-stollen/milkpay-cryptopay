@@ -35,8 +35,8 @@ jobs:
                mkdir -p try_install
                cd try_install
                virtualenv venv
-               venv/bin/pip install ../dist/milkpay-*.whl
-               venv/bin/python -c "import milkpay; print(milkpay.__version__)"
+               venv/bin/pip install ../dist/milkpay.cryptopay-*.whl
+               venv/bin/python -c "import milkpay.cryptopay; print(milkpay.cryptopay.__version__)"
 
          -  name: Publish artifacts
             uses: actions/upload-artifact@v2
