@@ -1,7 +1,7 @@
 
-#######
+#################
 milkpay-cryptopay
-#######
+#################
 
 **milkpay** is a set of lightweight crypto payment system SDKs.
 
@@ -13,7 +13,7 @@ Installation
     pip install -U milkpay-cryptopay
 
 Simple example
--------
+--------------
 
 .. code-block:: python
 
