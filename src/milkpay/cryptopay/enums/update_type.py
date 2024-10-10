@@ -1,5 +1,5 @@
-from enum import StrEnum
+from enum import Enum
 
 
-class UpdateType(StrEnum):
+class UpdateType(str, Enum):
     INVOICE_PAID = "invoice_paid"

@@ -1,7 +1,7 @@
-from enum import StrEnum
+from enum import Enum
 
 
-class Asset(StrEnum):
+class Asset(str, Enum):
     BTC = "BTC"
     TON = "TON"
     ETH = "ETH"

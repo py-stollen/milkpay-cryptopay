@@ -1,6 +1,6 @@
-from enum import StrEnum
+from enum import Enum
 
 
-class CurrencyType(StrEnum):
+class CurrencyType(str, Enum):
     CRYPTO = "crypto"
     FIAT = "fiat"

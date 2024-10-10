@@ -1,6 +1,6 @@
-from enum import StrEnum
+from enum import Enum
 
 
-class Network(StrEnum):
+class Network(str, Enum):
     MAIN_NET = "pay.crypt.bot"
     TEST_NET = "testnet-pay.crypt.bot"

@@ -1,4 +1,5 @@
 from datetime import datetime
+from typing import Union
 
 from pydantic import PlainSerializer
 from typing_extensions import Annotated
@@ -13,7 +14,7 @@ DateTime = Annotated[
 ]
 
 StringList = Annotated[
-    list[int | str],
+    list[Union[int, str]],
     PlainSerializer(
         func=lambda x: ",".join(map(str, x)),
         return_type=str,
