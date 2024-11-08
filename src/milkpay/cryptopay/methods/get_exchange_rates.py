@@ -1,12 +1,11 @@
-from stollen import StollenMethod
 from stollen.enums import HTTPMethod
 
-from ..client import Cryptopay
 from ..types import ExchangeRate
+from .base import CryptopayMethod
 
 
 class GetExchangeRates(
-    StollenMethod[list[ExchangeRate], Cryptopay],
+    CryptopayMethod[list[ExchangeRate]],
     http_method=HTTPMethod.GET,
     api_method="/getExchangeRates",
     returning=list[ExchangeRate],

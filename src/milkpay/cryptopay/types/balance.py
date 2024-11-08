@@ -1,9 +1,7 @@
-from stollen import StollenObject
-
-from ..client import Cryptopay
+from .base import CryptopayObject
 
 
-class Balance(StollenObject[Cryptopay]):
+class Balance(CryptopayObject):
     currency_code: str
     available: float
     onhold: float

@@ -1,11 +1,10 @@
-from stollen import StollenMethod
 from stollen.enums import HTTPMethod
 
-from ..client import Cryptopay
+from .base import CryptopayMethod
 
 
 class DeleteInvoice(
-    StollenMethod[bool, Cryptopay],
+    CryptopayMethod[bool],
     http_method=HTTPMethod.POST,
     api_method="/deleteInvoice",
     returning=bool,

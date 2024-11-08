@@ -1,12 +1,10 @@
 from datetime import datetime
 from typing import Optional
 
-from stollen import StollenObject
-
-from ..client import Cryptopay
+from .base import CryptopayObject
 
 
-class TransferType(StollenObject[Cryptopay]):
+class TransferType(CryptopayObject):
     transfer_id: int
     user_id: int
     asset: str

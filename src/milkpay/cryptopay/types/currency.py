@@ -1,11 +1,9 @@
 from typing import Optional
 
-from stollen import StollenObject
-
-from ..client import Cryptopay
+from .base import CryptopayObject
 
 
-class Currency(StollenObject[Cryptopay]):
+class Currency(CryptopayObject):
     is_blockchain: bool
     is_stablecoin: bool
     is_fiat: bool

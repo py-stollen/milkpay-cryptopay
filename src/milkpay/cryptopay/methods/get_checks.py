@@ -1,15 +1,14 @@
 from typing import Optional
 
-from stollen import StollenMethod
 from stollen.enums import HTTPMethod
 
-from ..client import Cryptopay
 from ..types import Check
 from ..types.custom import StringList
+from .base import CryptopayMethod
 
 
 class GetChecks(
-    StollenMethod[list[Check], Cryptopay],
+    CryptopayMethod[list[Check]],
     http_method=HTTPMethod.GET,
     api_method="/getChecks",
     returning=list[Check],

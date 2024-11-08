@@ -1,15 +1,14 @@
 from typing import Optional
 
-from stollen import StollenMethod
 from stollen.enums import HTTPMethod
 
-from ..client import Cryptopay
 from ..types import TransferType
 from ..types.custom import StringList
+from .base import CryptopayMethod
 
 
 class GetTransfers(
-    StollenMethod[list[TransferType], Cryptopay],
+    CryptopayMethod[list[TransferType]],
     http_method=HTTPMethod.GET,
     api_method="/getTransfers",
     returning=list[TransferType],

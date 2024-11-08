@@ -1,9 +1,7 @@
-from stollen import StollenObject
-
-from ..client import Cryptopay
+from .base import CryptopayObject
 
 
-class Profile(StollenObject[Cryptopay]):
+class Profile(CryptopayObject):
     app_id: int
     name: str
     payment_processing_bot_username: str

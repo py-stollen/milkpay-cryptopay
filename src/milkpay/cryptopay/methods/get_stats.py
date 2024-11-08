@@ -1,15 +1,14 @@
 from typing import Optional
 
-from stollen import StollenMethod
 from stollen.enums import HTTPMethod
 
-from ..client import Cryptopay
 from ..types import AppStats
 from ..types.custom import DateTime
+from .base import CryptopayMethod
 
 
 class GetStats(
-    StollenMethod[AppStats, Cryptopay],
+    CryptopayMethod[AppStats],
     http_method=HTTPMethod.GET,
     api_method="/getStats",
     returning=AppStats,

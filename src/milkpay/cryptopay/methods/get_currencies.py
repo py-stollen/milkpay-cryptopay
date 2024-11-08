@@ -1,12 +1,11 @@
-from stollen import StollenMethod
 from stollen.enums import HTTPMethod
 
-from ..client import Cryptopay
 from ..types import Currency
+from .base import CryptopayMethod
 
 
 class GetCurrencies(
-    StollenMethod[list[Currency], Cryptopay],
+    CryptopayMethod[list[Currency]],
     http_method=HTTPMethod.GET,
     api_method="/getCurrencies",
     returning=list[Currency],

@@ -1,12 +1,11 @@
-from stollen import StollenMethod
 from stollen.enums import HTTPMethod
 
-from ..client import Cryptopay
 from ..types import Profile
+from .base import CryptopayMethod
 
 
 class GetMe(
-    StollenMethod[Profile, Cryptopay],
+    CryptopayMethod[Profile],
     http_method=HTTPMethod.GET,
     api_method="/getMe",
     returning=Profile,

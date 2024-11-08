@@ -1,9 +1,7 @@
-from stollen import StollenObject
-
-from ..client import Cryptopay
+from .base import CryptopayObject
 
 
-class ExchangeRate(StollenObject[Cryptopay]):
+class ExchangeRate(CryptopayObject):
     is_valid: bool
     source: str
     target: str

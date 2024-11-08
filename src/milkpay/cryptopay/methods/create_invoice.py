@@ -1,15 +1,14 @@
 from typing import Optional
 
-from stollen import StollenMethod
 from stollen.enums import HTTPMethod
 
-from ..client import Cryptopay
 from ..types import Invoice
 from ..types.custom import StringList
+from .base import CryptopayMethod
 
 
 class CreateInvoice(
-    StollenMethod[Invoice, Cryptopay],
+    CryptopayMethod[Invoice],
     http_method=HTTPMethod.POST,
     api_method="/createInvoice",
     returning=Invoice,

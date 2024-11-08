@@ -1,11 +1,9 @@
 from datetime import datetime
 
-from stollen import StollenObject
-
-from ..client import Cryptopay
+from .base import CryptopayObject
 
 
-class AppStats(StollenObject[Cryptopay]):
+class AppStats(CryptopayObject):
     volume: float
     conversion: float
     unique_users_count: int

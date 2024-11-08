@@ -2,12 +2,11 @@ from datetime import datetime
 from typing import Optional
 
 from pydantic import Field
-from stollen import StollenObject
 
-from ..client import Cryptopay
+from .base import CryptopayObject
 
 
-class Check(StollenObject[Cryptopay]):
+class Check(CryptopayObject):
     id: int = Field(alias="check_id")
     hash: str
     asset: str
