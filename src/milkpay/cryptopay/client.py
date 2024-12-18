@@ -8,7 +8,6 @@ from typing import TYPE_CHECKING, Any, Optional
 from stollen import Stollen
 from stollen.requests.fields import Header
 
-from .enums import Network
 from .exceptions import (
     CryptopayAPIError,
     CryptopayBadRequestError,
@@ -41,7 +40,7 @@ class Cryptopay(Stollen):
             raise TypeError("api_token must be a string!")
         self._api_token = api_token
         self._production = production
-        host: str = Network.MAIN_NET if production else Network.TEST_NET
+        host: str = ["testnet-pay.crypt.bot", "pay.crypt.bot"][production]
         super().__init__(
             base_url=f"https://{host}/api",
             global_request_fields=[
